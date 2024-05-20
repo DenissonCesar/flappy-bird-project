@@ -57,6 +57,14 @@ const planoDeFundo = {
     altura: 204,
     x: 0,
     y: canvas.height - 204,
+    gravidade: 0.25
+    velocidade: 0
+    atualiza() {
+        flappyBird.velociadde = flappyBird.velocidade + flappyBird.gravidade
+        console.log(flappyBird.velocidade)
+        flappyBird.y = flappyBird.y + flappyBird.velocidade
+    }
+
     desenha() {
         contexto.fillStyle = '#70c5ce'
         contexto.fillRect(0,0, canvas.width, canvas.height)
